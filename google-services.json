@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1026339877529",
+    "firebase_url": "https://convergetreepushnotification.firebaseio.com",
+    "project_id": "convergetreepushnotification",
+    "storage_bucket": "convergetreepushnotification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026339877529:android:d9466c84b988b788",
+        "android_client_info": {
+          "package_name": "com.rncourse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026339877529-8c5p1oac6845aktv0qcvmb5an71ov34d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXrlI57kPRBwnQwGl_pU6Y6CWkxPxxuaQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1026339877529-8c5p1oac6845aktv0qcvmb5an71ov34d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
