@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View, Alert, Image, TouchableHighlight } from "react-native";
 import registerForPushNotificationsAsync from "./services/push_notifications";
 import { Notifications, Constants } from "expo";
+import axios from "axios";
 import { SQLite } from "expo-sqlite";
 import Carousel from "./components/carousel/Carousel";
 
@@ -33,6 +34,8 @@ class HomeScreen extends Component {
 
 		registerForPushNotificationsAsync()
 			.then((token) => {
+				console.log("token --> ", token);
+				this.deviceRegistrationAPI(token);
 				this.setState({
 					deviceToken: token
 				});
@@ -61,6 +64,18 @@ class HomeScreen extends Component {
 
 				Alert.alert("You have received new notification", notification.data.messageBody, [ { text: "Ok." } ]);
 			}
+		});
+	}
+
+	deviceRegistrationAPI(token) {
+		const expoTokenId = (token.split("["))[1].split("]")[0];
+
+		axios.post("http://webvidhyalaya.com/api/device/registration", {
+			"device_id": expoTokenId,
+			"token": "609e7d03-9511-4e45-bc40-6ddcd010499f",
+			"mobile_id": "",
+			"mobile_company": "",
+			"model_number": ""
 		});
 	}
 

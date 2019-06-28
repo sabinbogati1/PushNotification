@@ -29,6 +29,9 @@
     "android": {
       "package": "com.rncourse",
       "googleServicesFile": "./google-services.json"
+    },
+    "notification":{
+      "icon": "./assets/icon.png"
     }
   }
 }
